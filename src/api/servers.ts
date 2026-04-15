@@ -2,13 +2,27 @@ import { BaseApiClient } from "./client";
 import { Server } from "../types/server.type";
 import { ServerLog } from "../types/server-log.type";
 import { ServerBackup } from "../types/server-backup.type";
+import { ServerDisk } from "../types/server-disk.type";
 import { ListServersResponseDto } from "../types/dto/list-servers-response.dto";
 import { GetServerResponseDto } from "../types/dto/get-server-response.dto";
 import { GetServerLogsResponseDto } from "../types/dto/get-server-logs-response.dto";
 import { ListServerDiskBackupsResponseDto } from "../types/dto/list-server-disk-backups-response.dto";
 import { CreateServerDiskBackupResponseDto } from "../types/dto/create-server-disk-backup-response.dto";
+import { ListServerDisksResponseDto } from "../types/dto/list-server-disks-response.dto";
 
 export type ServerLogsOrder = "asc" | "desc";
+
+export type ResizeServerParams =
+  | { preset_id: number }
+  | {
+      configurator: {
+        configurator_id: number;
+        cpu?: number;
+        ram?: number;
+        disk?: number;
+        gpu?: number;
+      };
+    };
 
 export class ServersApiClient extends BaseApiClient {
   /**
@@ -44,10 +58,48 @@ export class ServersApiClient extends BaseApiClient {
   }
 
   /**
+   * Принудительно выключает сервер (аналог выдергивания кабеля)
+   */
+  async hardShutdownServer(serverId: number): Promise<void> {
+    await this.post<void>(`/api/v1/servers/${serverId}/hard-shutdown`);
+  }
+
+  /**
    * Перезагружает сервер через ACPI (мягкая перезагрузка)
    */
   async rebootServer(serverId: number): Promise<void> {
     await this.post<void>(`/api/v1/servers/${serverId}/reboot`);
+  }
+
+  /**
+   * Принудительная перезагрузка (reset power)
+   */
+  async hardRebootServer(serverId: number): Promise<void> {
+    await this.post<void>(`/api/v1/servers/${serverId}/hard-reboot`);
+  }
+
+  /**
+   * Клонирует сервер в отдельный VPS
+   */
+  async cloneServer(serverId: number): Promise<Server> {
+    const response = await this.post<GetServerResponseDto>(
+      `/api/v1/servers/${serverId}/clone`
+    );
+    return response.server;
+  }
+
+  /**
+   * Изменяет тариф или конфигурацию сервера
+   */
+  async resizeServer(
+    serverId: number,
+    params: ResizeServerParams
+  ): Promise<Server> {
+    const response = await this.patch<GetServerResponseDto>(
+      `/api/v1/servers/${serverId}`,
+      params
+    );
+    return response.server;
   }
 
   /**
@@ -61,6 +113,16 @@ export class ServersApiClient extends BaseApiClient {
       `/api/v1/servers/${serverId}/logs?order=${order}`
     );
     return response.server_logs;
+  }
+
+  /**
+   * Получает список дисков сервера
+   */
+  async listServerDisks(serverId: number): Promise<ServerDisk[]> {
+    const response = await this.get<ListServerDisksResponseDto>(
+      `/api/v1/servers/${serverId}/disks`
+    );
+    return response.server_disks;
   }
 
   /**
