@@ -12,3 +12,4 @@ export { authApiClient } from "./auth";
 export { networkDrivesApiClient } from "./network-drives";
 export { projectsApiClient } from "./projects";
 export { kubernetesApiClient } from "./kubernetes";
+export { balancersApiClient } from "./balancers";
