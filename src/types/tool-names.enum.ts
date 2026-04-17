@@ -28,4 +28,11 @@ export enum ToolNames {
   GET_ACCOUNT_FINANCES = "get_account_finances",
   GET_ACCOUNT_STATUS = "get_account_status",
   GET_ACCOUNT_SERVICES_COST = "get_account_services_cost",
+  LIST_SSH_KEYS = "list_ssh_keys",
+  CREATE_SSH_KEY = "create_ssh_key",
+  GET_SSH_KEY = "get_ssh_key",
+  UPDATE_SSH_KEY = "update_ssh_key",
+  DELETE_SSH_KEY = "delete_ssh_key",
+  ADD_SSH_KEYS_TO_SERVER = "add_ssh_keys_to_server",
+  REMOVE_SSH_KEY_FROM_SERVER = "remove_ssh_key_from_server",
 }
