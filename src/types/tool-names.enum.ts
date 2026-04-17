@@ -28,4 +28,9 @@ export enum ToolNames {
   GET_ACCOUNT_FINANCES = "get_account_finances",
   GET_ACCOUNT_STATUS = "get_account_status",
   GET_ACCOUNT_SERVICES_COST = "get_account_services_cost",
+  LIST_SERVER_PRESETS = "list_server_presets",
+  LIST_SERVER_OS = "list_server_os",
+  LIST_SERVER_CONFIGURATORS = "list_server_configurators",
+  LIST_SERVER_SOFTWARE = "list_server_software",
+  LIST_LOCATIONS = "list_locations",
 }
