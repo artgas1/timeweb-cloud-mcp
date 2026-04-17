@@ -7,3 +7,4 @@ export { sshKeysApiClient } from "./ssh-keys";
 export { s3BucketsApiClient } from "./s3-buckets";
 export { domainsApiClient } from "./domains";
 export { imagesApiClient } from "./images";
+export { firewallApiClient } from "./firewall";
