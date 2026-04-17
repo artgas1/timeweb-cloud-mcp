@@ -9,3 +9,4 @@ export { domainsApiClient } from "./domains";
 export { imagesApiClient } from "./images";
 export { firewallApiClient } from "./firewall";
 export { authApiClient } from "./auth";
+export { networkDrivesApiClient } from "./network-drives";

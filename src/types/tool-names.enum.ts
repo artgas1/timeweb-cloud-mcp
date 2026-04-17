@@ -161,4 +161,13 @@ export enum ToolNames {
   UPDATE_FIREWALL_RULE = "update_firewall_rule",
   DELETE_FIREWALL_RULE = "delete_firewall_rule",
   LIST_FIREWALL_GROUPS_BY_RESOURCE = "list_firewall_groups_by_resource",
+  LIST_NETWORK_DRIVES = "list_network_drives",
+  GET_NETWORK_DRIVE = "get_network_drive",
+  CREATE_NETWORK_DRIVE = "create_network_drive",
+  UPDATE_NETWORK_DRIVE = "update_network_drive",
+  DELETE_NETWORK_DRIVE = "delete_network_drive",
+  MOUNT_NETWORK_DRIVE = "mount_network_drive",
+  UNMOUNT_NETWORK_DRIVE = "unmount_network_drive",
+  LIST_NETWORK_DRIVE_AVAILABLE_RESOURCES = "list_network_drive_available_resources",
+  LIST_NETWORK_DRIVE_PRESETS = "list_network_drive_presets",
 }
