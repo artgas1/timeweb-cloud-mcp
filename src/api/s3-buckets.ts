@@ -183,9 +183,7 @@ export class S3BucketsApiClient extends BaseApiClient {
     subdomains: string[]
   ): Promise<AddedBucketSubdomain[]> {
     const data: DeleteBucketSubdomainsRequestDto = { subdomains };
-    // baseClient's delete() doesn't pass a body — use makeRequest via protected method.
-    // Since makeRequest is protected, expose via a local workaround:
-    const response = await (this as any).makeRequest<DeleteBucketSubdomainsResponseDto>(
+    const response = await this.makeRequest<DeleteBucketSubdomainsResponseDto>(
       "DELETE",
       `/api/v1/storages/buckets/${bucketId}/subdomains`,
       data

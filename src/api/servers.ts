@@ -17,7 +17,6 @@ import { DeleteServerResponseDto } from "../types/dto/delete-server-response.dto
 import { UpdateServerRequestDto } from "../types/dto/update-server-request.dto";
 import { ListServerIpsResponseDto } from "../types/dto/list-server-ips-response.dto";
 import { ServerIpResponseDto } from "../types/dto/server-ip-response.dto";
-import { CreateServerDiskRequestDto } from "../types/dto/create-server-disk-request.dto";
 import { ServerDiskResponseDto } from "../types/dto/server-disk-response.dto";
 import { AutoBackupResponseDto } from "../types/dto/auto-backup-response.dto";
 import { ServerDiskBackupResponseDto } from "../types/dto/server-disk-backup-response.dto";
