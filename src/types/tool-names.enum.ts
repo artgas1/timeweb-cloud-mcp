@@ -122,4 +122,13 @@ export enum ToolNames {
   UPDATE_DOMAIN_REQUEST = "update_domain_request",
   LIST_TLDS = "list_tlds",
   GET_TLD = "get_tld",
+  LIST_IMAGES = "list_images",
+  CREATE_IMAGE = "create_image",
+  GET_IMAGE = "get_image",
+  UPDATE_IMAGE = "update_image",
+  DELETE_IMAGE = "delete_image",
+  LIST_IMAGE_DOWNLOADS = "list_image_downloads",
+  CREATE_IMAGE_DOWNLOAD = "create_image_download",
+  GET_IMAGE_DOWNLOAD = "get_image_download",
+  DELETE_IMAGE_DOWNLOAD = "delete_image_download",
 }
