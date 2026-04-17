@@ -53,4 +53,11 @@ export enum ToolNames {
   LIST_SERVER_CONFIGURATORS = "list_server_configurators",
   LIST_SERVER_SOFTWARE = "list_server_software",
   LIST_LOCATIONS = "list_locations",
+  LIST_SSH_KEYS = "list_ssh_keys",
+  CREATE_SSH_KEY = "create_ssh_key",
+  GET_SSH_KEY = "get_ssh_key",
+  UPDATE_SSH_KEY = "update_ssh_key",
+  DELETE_SSH_KEY = "delete_ssh_key",
+  ADD_SSH_KEYS_TO_SERVER = "add_ssh_keys_to_server",
+  REMOVE_SSH_KEY_FROM_SERVER = "remove_ssh_key_from_server",
 }

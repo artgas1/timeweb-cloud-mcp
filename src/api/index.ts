@@ -3,3 +3,4 @@ export { dbaasApiClient } from "./dbaas";
 export { serversApiClient } from "./servers";
 export { accountApiClient } from "./account";
 export { catalogsApiClient } from "./catalogs";
+export { sshKeysApiClient } from "./ssh-keys";
