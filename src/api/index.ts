@@ -15,3 +15,4 @@ export { kubernetesApiClient } from "./kubernetes";
 export { balancersApiClient } from "./balancers";
 export { containerRegistryApiClient } from "./container-registry";
 export { dedicatedServersApiClient } from "./dedicated-servers";
+export { mailApiClient } from "./mail";
