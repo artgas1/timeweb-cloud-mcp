@@ -16,3 +16,5 @@ export { balancersApiClient } from "./balancers";
 export { containerRegistryApiClient } from "./container-registry";
 export { dedicatedServersApiClient } from "./dedicated-servers";
 export { mailApiClient } from "./mail";
+export { aiAgentsApiClient } from "./ai-agents";
+export { knowledgeBasesApiClient } from "./knowledge-bases";
