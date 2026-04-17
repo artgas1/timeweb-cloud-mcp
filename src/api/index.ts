@@ -4,3 +4,4 @@ export { serversApiClient } from "./servers";
 export { accountApiClient } from "./account";
 export { catalogsApiClient } from "./catalogs";
 export { sshKeysApiClient } from "./ssh-keys";
+export { s3BucketsApiClient } from "./s3-buckets";
