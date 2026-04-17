@@ -28,4 +28,13 @@ export enum ToolNames {
   GET_ACCOUNT_FINANCES = "get_account_finances",
   GET_ACCOUNT_STATUS = "get_account_status",
   GET_ACCOUNT_SERVICES_COST = "get_account_services_cost",
+  LIST_IMAGES = "list_images",
+  CREATE_IMAGE = "create_image",
+  GET_IMAGE = "get_image",
+  UPDATE_IMAGE = "update_image",
+  DELETE_IMAGE = "delete_image",
+  LIST_IMAGE_DOWNLOADS = "list_image_downloads",
+  CREATE_IMAGE_DOWNLOAD = "create_image_download",
+  GET_IMAGE_DOWNLOAD = "get_image_download",
+  DELETE_IMAGE_DOWNLOAD = "delete_image_download",
 }
