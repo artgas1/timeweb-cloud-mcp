@@ -1,6 +1,6 @@
 import { SshKey } from "../ssh-key.type";
 
 export interface GetSshKeyResponseDto {
-  "ssh-key": SshKey;
+  ssh_key: SshKey;
   meta: { total: number };
 }
